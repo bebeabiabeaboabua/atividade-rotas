@@ -1,59 +1,29 @@
-# AtividadeRotas
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
+# ATIVIDADE ANGULAR!
+Nessa atividade desenvolvi uma aplicação do 0 em Angular baseada no passo-a-passo dado pelo professor Marcelo.
+## O que eu fiz nesse projeto?
+Criei duas páginas, uma chamada **user-list** e outra chamada **user-detail**, um service e uma interface "user" baseada na API pública 'https://jsonplaceholder.typicode.com/users'.
+### Observable
+Primeiramente, o que é o Observable?
+> No Angular, o Observable representa um fluxo de dados assíncrono. Ele é usado principalmente para lidar com operações que não retornam imediatamente, como requisições HTTP.
+Então
+> Quando usamos o HttpClient, ele retorna um Observable porque a requisição pode demorar. O Observable só executa quando alguém se inscreve nele através do subscribe.
+Nesse código extraído do **user.service.ts** fiz o uso do observable
 ```
+export class UserService {
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
-## Code scaffolding
+  constructor(private http: HttpClient) {}
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.apiUrl);
+  }
+}
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+Aqui o método retorna um Observable tipado como User[]. Isso significa que ele ainda não contém os dados, mas vai emitir uma lista de usuários quando a requisição HTTP for concluída.
+O subscribe é necessário porque o Observable é "lazy", ou seja, ele só executa quando alguém se inscreve. Nesse momento, quando a API responde, o Observable emite os dados e o callback do subscribe é executado.
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
+this.userService.getUsers().subscribe(data => {
+  this.users = data;
+});
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
