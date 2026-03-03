@@ -1,7 +1,13 @@
 # ATIVIDADE ANGULAR!
-Nessa atividade desenvolvi uma aplicação do 0 em Angular baseada no passo-a-passo dado pelo professor Marcelo.
+Nessa atividade desenvolvi uma aplicação do zero em Angular baseada no passo-a-passo dado pelo professor Marcelo.
+O site consiste em uma lista com nomes e dados de email e cidade de usuários extraidos de uma API púplica. Cada usuário tem um botão que abre outra sessão com mais detalhes do usuário.
 ## O que eu fiz nesse projeto?
-Criei duas páginas, uma chamada **user-list** e outra chamada **user-detail**, um service e uma interface "user" baseada na API pública 'https://jsonplaceholder.typicode.com/users'.
+- Criei duas páginas, uma chamada **user-list** e outra chamada **user-detail**, um service e uma interface "user" baseada na API pública 'https://jsonplaceholder.typicode.com/users'
+- Botão para ver detalhes do user
+- Criei rotas para /detail, /detail/:id (tela de detalhes do usuário com id carregado), /users (tela de lista com todos os usuários)
+- Usei paramMap para capturar o id na rota /details/:id
+- Criei informações de carregamento e erro
+
 ## Rota dinâmica
 Essa atividade usa uma rota dinâmica: /details/:id
 Que fica
