@@ -1,1 +1,18 @@
-<p>users-list works!</p>
+<h1>Users</h1>
+  @for (user of users; track user.id){
+  <section class="users">
+    <ul class="list">
+  <li class="name">
+    Name: {{ user.name }}
+  </li>
+  <li class="email">
+     Email: {{ user.email }}
+  </li>
+  <li class="city">
+    City: {{user.address.city}}
+  </li>
+   </ul>
+   <button class="details" routerLink="/details">Details</button>
+  </section>
+  }
+

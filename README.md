@@ -8,7 +8,7 @@ Primeiramente, o que é o Observable?
 Então
 > Quando usamos o HttpClient, ele retorna um Observable porque a requisição pode demorar. O Observable só executa quando alguém se inscreve nele através do subscribe.
 
-Nesse código extraído do **user.service.ts** fiz o uso do observable
+Nesses dois códigos extraído do **user.service.ts** fiz o uso do observable
 ```
 export class UserService {
 
@@ -20,6 +20,13 @@ export class UserService {
     return this.http.get<User[]>(this.apiUrl);
   }
 }
+```
+```
+    userById(id: number): Observable<User>{
+
+    return this.http.get<User>(this.apiUrl)
+
+  }
 ```
 Aqui o método retorna um Observable tipado como User[]. Isso significa que ele ainda não contém os dados, mas vai emitir uma lista de usuários quando a requisição HTTP for concluída.
 O subscribe é necessário porque o Observable é "lazy", ou seja, ele só executa quando alguém se inscreve. Nesse momento, quando a API responde, o Observable emite os dados e o callback do subscribe é executado.
