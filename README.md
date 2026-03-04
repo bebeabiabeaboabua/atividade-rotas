@@ -17,7 +17,8 @@ Ou seja, uma rota dinâmica é uma URL que tem uma parte variável, nesse caso o
 O uso da rota dinâmica foi muito importante para passar o id de um componente pro outro, permitindo encontrar dados do usuário selecionado.
 ### Uso do paramMap
 O que é o _paramMap_?
-O paramMap é um objeto que permite acessar os parâmetros definidos na rota (como :id).
+> [!IMPORTANT]
+>O paramMap é um objeto que permite acessar os parâmetros definidos na rota (como :id).
 Ele lê os valores que estão na URL e permite que o componente utilize esses valores para buscar dados ou executar alguma lógica.
 Nesse caso, usa o id pra buscar as informações do usuário pra depois carregar na tela o nome, email etc.
 
@@ -69,3 +70,9 @@ this.userService.getUsers().subscribe(data => {
   this.users = data;
 });
 ```
+
+## Considerações finais
+Gostei muito desse projeto, por a mão na massa realmente me ajudou a entender melhor os conceitos do angular e como fazer uma boa página do zero.
+A versão atual está assim:
+![Screenshot of the final site](/src/img/print-site-details.png)
+![Screenshot of the final site](/src/img/print-site-users.png)
