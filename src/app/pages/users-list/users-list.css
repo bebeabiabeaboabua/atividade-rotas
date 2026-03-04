@@ -61,3 +61,22 @@
   font-size: 20px;
 }
 
+.search-box{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.search{
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 300px;
+  background-color: #FFDBFD;
+  outline: none;
+}
+
+.search:focus{
+  border: 2px solid #3d43ff;
+  box-shadow: 0 0 8px #6367FF;
+}
+

@@ -8,6 +8,7 @@ O site consiste em uma lista com nomes e dados de email e cidade de usuários ex
 - Usei paramMap para capturar o id na rota /details/:id
 - Criei informações de carregamento e erro
 - Inseri ícones personalizados e mudei o icon do site
+- Criei uma search box na tela de lista de usuários, que filtra pelo nome
 
 ## Rota dinâmica
 Essa atividade usa uma rota dinâmica: /details/:id  

@@ -2,6 +2,10 @@
 <h1>Users</h1>
 </section>
 
+<section class="search-box">
+<input type="search" class="search" placeholder="Search names" [(ngModel)]="searchTerm">
+</section>
+
 <section class="container">
 @if(isLoading){
 
@@ -12,7 +16,15 @@
   </section>
 
 }@else {
-  @for (user of users; track user.id){
+  @if(!hasResults()){
+  <section class="no-results-section">
+  <div  class="no-results">
+  <p>Can't find results</p>
+  </div>
+  </section>
+  }@else {
+  @for (user of filteredUsers; track user.id){
+
   <section class="users">
     <ul class="list">
   <li class="name">
@@ -33,7 +45,8 @@
    </section>
   </section>
   }
-
+  }
 }
+
 </section>
 

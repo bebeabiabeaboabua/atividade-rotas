@@ -5,11 +5,11 @@ body{
   margin: 0;
 }
 
-.loading-section{
+.loading-section, .no-results-section{
   display: flex;
   justify-content: center;
 }
-.loading{
+.loading, .no-results{
   background-color: #C9BEFF;
   box-shadow: 2px 10px 10px #6367FF;
   padding: 20px;
