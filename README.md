@@ -57,6 +57,10 @@ export class UserService {
   }
 }
 ```
+Aqui o método retorna um Observable tipado como User[]. Isso significa que ele ainda não contém os dados, mas vai emitir uma lista de usuários quando a requisição HTTP for concluída.  
+O subscribe é necessário porque o Observable é "lazy", ou seja, ele só executa quando alguém se inscreve. Nesse momento, quando a API responde, o Observable emite os dados e o callback do subscribe é executado.  
+Outro lugar que usei o Observable foi no método **userById**  
+O método envia uma requisição, como esse dado não é imediato, usamos Observable, quando tiver resposta ele envia os dados, e o subscribe pede pro Observalbe avisar ele quando chegar.
 ```
     userById(id: number): Observable<User>{
 
@@ -64,8 +68,7 @@ export class UserService {
 
   }
 ```
-Aqui o método retorna um Observable tipado como User[]. Isso significa que ele ainda não contém os dados, mas vai emitir uma lista de usuários quando a requisição HTTP for concluída.  
-O subscribe é necessário porque o Observable é "lazy", ou seja, ele só executa quando alguém se inscreve. Nesse momento, quando a API responde, o Observable emite os dados e o callback do subscribe é executado.
+Exemblo de **subscribe**:  
 ```
 this.userService.getUsers().subscribe(data => {
   this.users = data;
