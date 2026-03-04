@@ -1,29 +1,63 @@
-<button [routerLink]='["/users"]'>Go back</button>
+<section class="title">
+<button [routerLink]='["/users"]' class="button-back">Go back</button>
 <h1>User details</h1>
+</section>
 
+<section>
 @if(isLoading){
 
+  <section class="loading-section">
+  <div  class="loading">
   <p>Loading...</p>
+  </div>
+  </section>
 
 }@else{
 
  @if (user){
 
+  <section class="container">
+
+  <section class="section-name">
   <h2>Name: </h2>
   <p>{{ user.name }}</p>
+  </section>
+
+  <section class="section-email">
   <h2>Email: </h2>
   <p>{{ user.email }}</p>
+  </section>
+
+  <hr>
+
+  <section class="section-username">
   <h3>Username: </h3>
   <p>{{ user.username }}</p>
+    </section>
+
+  <section class="section-phone">
   <h3>Phone: </h3>
   <p>{{ user.phone }}</p>
+  </section>
+
+   <section class="section-city">
   <h3>City: </h3>
   <p>{{ user.address.city }}</p>
+  </section>
+
+  <section class="section-company">
   <h3>Company name: </h3>
   <p>{{ user.company.name }}</p>
+  </section>
 
+  </section>
   }@else{
 
-    <p>Error! This user does not exist :/</p>
-  }
+    <section class="error-section">
+      <div class="error">
+      <p>Oops! This user does not exist :/</p>
+      </div>
+    </section>
+    }
 }
+</section>

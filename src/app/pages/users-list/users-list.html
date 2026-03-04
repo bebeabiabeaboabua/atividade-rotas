@@ -1,5 +1,8 @@
+<section class="title">
 <h1>Users</h1>
-<hr>
+</section>
+
+<section class="container">
 @if(isLoading){
 <p>Loading...</p>
 }@else {
@@ -7,18 +10,21 @@
   <section class="users">
     <ul class="list">
   <li class="name">
-    Name: {{ user.name }}
+    <span>Name:</span> {{ user.name }}
   </li>
   <li class="email">
-     Email: {{ user.email }}
+     <span>Email:</span> {{ user.email }}
   </li>
   <li class="city">
-    City: {{user.address.city}}
+    <span>City:</span> {{user.address.city}}
   </li>
    </ul>
+   <section class="button-details">
    <button class="details" [routerLink]="['/details', user.id]">Details</button>
+   </section>
   </section>
   }
 
 }
+</section>
 

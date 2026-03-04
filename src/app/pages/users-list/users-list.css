@@ -1,0 +1,56 @@
+.users{
+  background-color: #C9BEFF;
+  box-shadow: 2px 10px 10px #6367FF;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container{
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.details{
+  background-color: #6367FF;
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+
+}
+.button-details {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details:hover{
+  background-color: #7e82f8;
+}
+
+.title{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  color: #FFDBFD;
+  box-shadow: 0px 10px 30px 0px #6367FF;
+}
+
+.name span, .email span, .city span{
+  color: #3d43ff;
+  font-weight: 700;
+}
+
+
