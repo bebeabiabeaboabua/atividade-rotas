@@ -10,6 +10,7 @@ O site consiste em uma lista com nomes e dados de email e cidade de usuários ex
 - Inseri ícones personalizados e mudei o icon do site
 - Criei uma search box na tela de lista de usuários, que filtra pelo nome
 - Adicionei imagens placeholder de perfil para os usuários
+- Adicionei setas de navegação entre usuários na tela de detalhes
 
 ## Rota dinâmica
 Essa atividade usa uma rota dinâmica: /details/:id  
