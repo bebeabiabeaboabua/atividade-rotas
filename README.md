@@ -84,6 +84,6 @@ Fiquei bem satisfeita com o resultado final e o processo todo foi muito gostoso!
 A versão atual está assim:  
 ### Tela principal de users
 ![Screenshot of the final site](/src/img/print-site-users.png)
-### Tela de detalhes do usuário
+### Tela de detalhes do usuário id 3
 ![Screenshot of the final site](/src/img/print-site-details.png)
 
